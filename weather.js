@@ -29,10 +29,7 @@ async function checkWeather(city){
         }else if(data.weather[0].main == ""){
         weatherIcon.src ="rain.png"
     }
-    }
- 
-}
-
+    
 searchBtn.addEventListener("click", ()=>{
     checkWeather(searchBox.value)
 })
@@ -47,3 +44,21 @@ window.onload = ()=>{
         checkWeather(savecity);
     }
 }
+    }
+ 
+}
+
+// searchBtn.addEventListener("click", ()=>{
+//     checkWeather(searchBox.value)
+// })
+// searchBtn.addEventListener("click", ()=>{
+//     const city = searchBox.value;
+//     localStorage.setItem("lastcity", city);
+//     checkWeather(city)
+// })
+// window.onload = ()=>{
+//     const savecity = localStorage.setItem("lastrcity");
+//     if(savecity){
+//         checkWeather(savecity);
+//     }
+// }
