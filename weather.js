@@ -36,3 +36,14 @@ async function checkWeather(city){
 searchBtn.addEventListener("click", ()=>{
     checkWeather(searchBox.value)
 })
+searchBtn.addEventListener("click", ()=>{
+    const city = searchBox.value;
+    localStorage.setItem("lastcity", city);
+    checkWeather(city)
+})
+window.onload = ()=>{
+    const savecity = localStorage.setItem("lastrcity");
+    if(savecity){
+        checkWeather(savecity);
+    }
+}

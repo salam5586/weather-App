@@ -105,10 +105,7 @@ body{
     }
     input {
         height: 40px;
-        width: 220px;
+        width: 100px;
     }
-button{
-    height: 50px;
-    width: 100%;
-}
+
 }
